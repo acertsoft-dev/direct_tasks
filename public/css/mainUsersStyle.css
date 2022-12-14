@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2? family= Comfortaa:wght@300;400;500;600;700 & family= Jost:ital,wght@0,100;0,200;0,300; 0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    /*Colors*/
+    --primary-color: #1d4ed8;
+    --secondary-color: #3b82f6;
+    --tertiary-color: #eff6ff;
+    --light-color: #bfdbfe;
+    --dark-color: #1e3a8a;
+    
+    /* Dark mode
+        #606875
+        #111827
+        #253140
+        #3E4A59
+        #F2F2F2 */
+
+    /*Fonts*/
+    --primaryfont: 'Poppins', monospace, sans-serif;
+    --secondaryfont: 'Jost', sans-serif, monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondaryfont);
+    font-weight: 400;
+}
+/* body */
+body{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'nav-primary section-primary';
+}
+/* end body*/
+
+/* nav-left */
+.nav-left{
+    height: 100%;
+    grid-area: nav-primary;
+    background-color: #253140;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas: 'nav-logo' 'nav-menu' 'card-user';
+}
+/* nav-logo */
+.nav-logo{
+    grid-area: nav-logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-logo img{
+    width: 250px;
+}
+
+/* end nav-log */
+
+/* nav-menu */
+.nav-menu{
+    grid-area: nav-menu;
+}
+.nav-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-menu ul li{
+    width: 280px;
+    padding: 10px 2px;
+    border-radius: 5px;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+.nav-menu ul li:hover{
+    background-color: #111827;
+}
+.nav-menu ul li a{
+   font-size: 1.1em;
+   color: #F2F2F2; 
+}
+.nav-menu ul li a ion-icon{
+    margin: 0px 10px;
+}
+/* end nav-menu */
+
+/* card-user */
+.card-user{
+    grid-area: card-user;
+    background-color: #3E4A59;
+    display: flex;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0px 15px 0px 15px;
+}
+.card-user .cargo{
+    display: flex;
+    flex-direction: column;
+    color: #eff6ff;
+    overflow: hidden;
+}
+.card-user .cargo h2{
+    font-family: var(--primaryfont);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+/* end card-user*/
+
+/* btns-exit */
+.card-user .btns-exit{
+    margin: 15px;
+    font-family: var(--primaryfont);
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1d4ed8;
+    padding: 10px 6px;
+    border-radius: 25px;
+}
+.card-user .btns-exit:hover{
+    color: #bb0e0e;
+    background-color: #eff6ff;
+    text-decoration: underline;
+}
+.card-user .btns-exit:active{
+    color: #ffffff;
+    background-color: #1d4ed8;
+}
+/* end btns-exit */
+
+/* end nav-left*/
+
+/* sect-right */
+.sect-right{
+    grid-area: section-primary;
+    background-color: whitesmoke;
+}
+/* end sect-right*/

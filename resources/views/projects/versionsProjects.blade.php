@@ -1,6 +1,6 @@
 @extends('layouts.mainUsers')
-<link rel="stylesheet" href="/css/versionsStyle.css">
-<link rel="shortcut icon" href="/imgs/acertsoft.png" type="image/png">
+<link rel="stylesheet" href="/direct_tasks/public/css/versionsStyle.css">
+<link rel="shortcut icon" href="/direct_tasks/public/imgs/acertsoft.png" type="image/png">
 @section('Title', 'DirectTarefas - Versões')
 
 @section('mainUsers')

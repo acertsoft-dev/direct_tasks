@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="imgs/acertsoft.png" type="image/png">
+    <link rel="shortcut icon" href="/direct_tasks/public/imgs/acertsoft.png" type="image/png">
     <title>Task PDF</title>
     <style>
         body{

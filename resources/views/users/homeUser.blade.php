@@ -1,6 +1,6 @@
 @extends('layouts.mainUsers')
 @extends('layouts.main')
-<link rel="stylesheet" href="/css/homeUser.css">
+<link rel="stylesheet" href="/direct_tasks/public/css/homeUser.css">
 @section('Title', 'DirectTarefas - Início')
 
 @section('mainUsers')

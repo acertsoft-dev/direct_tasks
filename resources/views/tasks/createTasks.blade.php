@@ -1,6 +1,6 @@
 @extends('layouts.mainUsers')
-<link rel="stylesheet" href="/css/createStyle.css">
-<link rel="shortcut icon" href="/imgs/acertsoft.png" type="image/png">
+<link rel="stylesheet" href="/direct_tasks/public/css/createStyle.css">
+<link rel="shortcut icon" href="/direct_tasks/public/imgs/acertsoft.png" type="image/png">
 <link rel="stylesheet" href="dist/ui/trumbowyg.min.css">
 @section('Title', 'DirectTarefas - Tarefas')
 
@@ -304,4 +304,4 @@
 @endsection
 
 
-<script src="/js/scripts.js"></script>
+<script src="/direct_tasks/public/js/scripts.js"></script>

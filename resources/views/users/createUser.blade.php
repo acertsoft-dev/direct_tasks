@@ -1,6 +1,6 @@
 @extends('layouts.mainUsers')
 @extends('layouts.main')
-<link rel="stylesheet" href="/css/createStyle.css">
+<link rel="stylesheet" href="/direct_tasks/public/css/createStyle.css">
 @section('Title', 'DirectTarefas - Cadastrar Usuários')
 
 @section('mainUsers')

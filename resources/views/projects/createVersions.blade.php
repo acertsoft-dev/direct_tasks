@@ -1,6 +1,6 @@
 @extends('layouts.mainUsers')
 @extends('layouts.main')
-<link rel="stylesheet" href="/css/createStyle.css">
+<link rel="stylesheet" href="/direct_tasks/public/css/createStyle.css">
 @section('Title', 'DirectTarefas - Cadastrar Versão')
 
 @section('mainUsers')
@@ -118,4 +118,4 @@
     </div>
 @endif
 
-<script src="/js/scriptsVersions.js"></script>
+<script src="/direct_tasks/public/js/scriptsVersions.js"></script>

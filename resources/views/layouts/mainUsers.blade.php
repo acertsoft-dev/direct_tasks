@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="card-user">
-            <img src="/imgs/generic.png" alt="Foto do usuário">
+            <img src="/direct_tasks/public/imgs/generic.png" alt="Foto do usuário">
             <div class="cargo">
                 <h2 class="cursor-default">{{ Auth::user()->name }}</h2>
                 <p class="cursor-default">Cargo</p>

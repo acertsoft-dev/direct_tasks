@@ -1,5 +1,5 @@
 @extends('layouts.main')
-<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/direct_tasks/public/css/login.css">
 @section('Title', 'DirectTarefas - Login')
 
 @if ($errors->any())

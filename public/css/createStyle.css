@@ -142,7 +142,7 @@
 
 .formFron form .form-inputs .div-form #preview{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;

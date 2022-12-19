@@ -140,7 +140,8 @@
     padding-top: 2.2%;
 }
 
-.formFron form .form-inputs .div-form #preview,.formFron form .form-inputs .div-form #previewFixe{
+.formFron form .form-inputs .div-form #preview, 
+.formFron form .form-inputs .div-form #previewFixe{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -149,7 +150,8 @@
     margin-left: 25px;
 }
 
-.formFron form .form-inputs .div-form #preview table,.formFron form .form-inputs .div-form #previewFixe table{
+.formFron form .form-inputs .div-form #preview table, 
+.formFron form .form-inputs .div-form #previewFixe table{
     background-color: #fff;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -157,31 +159,37 @@
     border: 1px solid #fff;
 }
 
-.formFron form .form-inputs .div-form #preview table tr:nth-child(even),.formFron form .form-inputs .div-form #previewFixe table tr:nth-child(even){
+.formFron form .form-inputs .div-form #preview table tr:nth-child(even),
+.formFron form .form-inputs .div-form #previewFixe table tr:nth-child(even){
     background-color: rgba(180, 180, 180, 0.5);
 }
 
-.formFron form .form-inputs .div-form #preview table tr td,.formFron form .form-inputs .div-form #previewFixe table tr td{
+.formFron form .form-inputs .div-form #preview table tr td,
+.formFron form .form-inputs .div-form #previewFixe table tr td{
     padding: 2px 5px;
 }
 
-.formFron form .form-inputs .div-form #preview table tr td a,.formFron form .form-inputs .div-form #previewFixe table tr td a{
+.formFron form .form-inputs .div-form #preview table tr td a,
+.formFron form .form-inputs .div-form #previewFixe table tr td a{
     font-family: var(--font-one);
     font-size: 1.1em;
     cursor: pointer;
 }
-.formFron form .form-inputs .div-form #preview table tr td a:hover,.formFron form .form-inputs .div-form #previewFixe table tr td a:hover{
+.formFron form .form-inputs .div-form #preview table tr td a:hover,
+.formFron form .form-inputs .div-form #previewFixe table tr td a:hover{
     color: #3b82f6;
     text-decoration: underline;
 }
 
-.formFron form .form-inputs .div-form #preview #click,.formFron form .form-inputs .div-form #previewFixe #click{
+.formFron form .form-inputs .div-form #preview #click,.formFron form 
+.form-inputs .div-form #previewFixe #click{
     font-family: var(--font-one);
     cursor: pointer;
     width: 100%;
 }
 
-.formFron form .form-inputs .div-form #preview #click:hover, .formFron form .form-inputs .div-form #previewFixe #click:hover{
+.formFron form .form-inputs .div-form #preview #click:hover, 
+.formFron form .form-inputs .div-form #previewFixe #click:hover{
     color: #3b82f6;
     text-decoration: underline;
 }

@@ -235,17 +235,14 @@
                         <div class="div-form" id="invisible" style="display: flex">
                             <div class="inputs-primary" style="width: 90%">
                                 <label>Arquivos vinculados a tarefa:</label>
-                                <div id="previewFixe">
-                                    <table id="tableUp">
+                                <div id="preview">
+                                    <table id="tableDow">
                                         @foreach ($arrayFiles as $file)
                                             <tr>
                                                 <td><a href="/download/{{$file}}" target="_blank">{{$file}}</a></td>
                                             </tr>
                                         @endforeach
                                     </table>
-                                </div>
-                                <div id="preview">
-
                                 </div>
                             </div>
                         </div>

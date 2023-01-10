@@ -15,7 +15,7 @@ Route::get('logout',[UserController::class, 'doLogout'])->name('logout');
 Route::get('/homeUser', [UserController::class, 'home'])->middleware('auth');
 
 Route::get('/pdfTask/{id}', [TasksController::class, 'gerePdf'])->middleware('auth');
-Route::post('/download/{file}', [TasksController::class, 'download'])->middleware('auth');
+Route::get('/download/{file}', [TasksController::class, 'download'])->middleware('auth');
 Route::get('/tasks', [TasksController::class, 'showTasksList'])->middleware('auth');
 Route::get('/tasks/{id}/edit', [TasksController::class, 'edit'])->middleware('auth');
 Route::put('/tasks/{id}', [TasksController::class, 'update'])->middleware('auth');

@@ -239,7 +239,7 @@
                                     <table id="tableDow">
                                         @foreach ($arrayFiles as $file)
                                             <tr>
-                                                <td><a href="/download/{{$file}}" target="_blank">{{$file}}</a></td>
+                                                <td><a href="/download/{{$file}}" {{--target="_blank"--}}>{{$file}}</a></td>
                                             </tr>
                                         @endforeach
                                     </table>

@@ -226,6 +226,7 @@ class TasksController extends Controller
     public function download($file){
 
         // return response()->download(storage_path().'/app/public/'.$file);
+        dd(storage_path());
         return response()->download('/derect_tasks/storage/app/texte.txt');
     }
 }

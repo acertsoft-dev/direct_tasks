@@ -171,8 +171,8 @@ class TasksController extends Controller
                     $input += array('name_files' => $nameFilesEnd);
                 }
                 if($request->solution == null){
-            $input += array('solution' => null);
-        }
+                    $input += array('solution' => null);
+                }
 
                 $task = Tasks::find($id);
                 $task->update($input);

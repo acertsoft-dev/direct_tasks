@@ -163,7 +163,7 @@ class TasksController extends Controller
                     foreach($request->file as $files){
                         $nameFile = $newDate->day . $newDate->month . $newDate->year . $newDate->hour . $newDate->minute . '-' . $files->getClientOriginalName();
                         array_push($namesFiles, $nameFile);
-                        $upload = $files->storeAs($request->folder, $nameFile);
+                        $upload = $files->storeAs($nameFile);
                     }    
                     $nameFileTaskExist = $taskExistent->name_files;
                     $stringFiles = implode(';', $namesFiles);
@@ -187,7 +187,7 @@ class TasksController extends Controller
             foreach($request->file as $files){
                 $nameFile = $newDate->day . $newDate->month . $newDate->year . $newDate->hour . $newDate->minute . '-' . $files->getClientOriginalName();
                 array_push($namesFiles, $nameFile);
-                $upload = $files->storeAs($request->folder, $nameFile);
+                $upload = $files->storeAs($nameFile);
             }
             $nameFileTaskExist = $taskExistent->name_files;
             $stringFiles = implode(';', $namesFiles);
@@ -226,7 +226,7 @@ class TasksController extends Controller
     public function download($file){
 
         // return response()->download(storage_path().'/app/public/'.$file);
-        dd(storage_path());
-        return response()->download('/derect_tasks/storage/app/texte.txt');
+        dd(storage_path().'/app/public/'.$file);
+        return response()->download(storage_path().'/derect_tasks/storage/app/texte.txt');
     }
 }

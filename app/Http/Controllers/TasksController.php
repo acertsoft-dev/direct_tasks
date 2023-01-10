@@ -226,8 +226,8 @@ class TasksController extends Controller
 
     public function download($file){
         
-        return view('tasks.tasks');
-        // return response()->download(storage_path().'/app/public/'.$file);
+
+        return response()->download(storage_path().'/app/'.$file);
         // return response()->download('direct_tasks/storage/app/file_tasks/'.$file);
     }
 }

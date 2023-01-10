@@ -10,6 +10,7 @@ use App\Models\Tasks;
 use ArrayObject;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
@@ -224,8 +225,9 @@ class TasksController extends Controller
     }
 
     public function download($file){
-
-        dd('direct_tasks/storage/app/file_tasks/'.$file);
+        if ($file != null){
+            dd('direct_tasks/storage/app/file_tasks/'.$file);
+        }
         // return response()->download(storage_path().'/app/public/'.$file);
         // return response()->download('direct_tasks/storage/app/file_tasks/'.$file);
     }

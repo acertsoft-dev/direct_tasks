@@ -38,7 +38,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL').'direct_tasks/storage',
             'visibility' => 'public',
         ],
 
@@ -67,7 +67,7 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        public_path('direct_tasks/storage') => storage_path('app/file_tasks'),
     ],
 
 ];

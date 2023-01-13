@@ -228,6 +228,6 @@ class TasksController extends Controller
         
 
         // return response()->download(storage_path().'/app/texte.txt');
-        return response()->download(storage_path().'/app/file_tasks/texte.txt');
+        return response()->download(storage_path().'/texte.txt');
     }
 }

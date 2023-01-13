@@ -37,7 +37,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => storage_path('app/file_tasks'),
             'url' => env('https://pietronunes.com.br/direct_tasks').'/storage',
             'visibility' => 'public',
         ],

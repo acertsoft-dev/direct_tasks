@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'public'),
+    'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,8 +37,8 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/file_tasks'),
-            'url' => env('https://pietronunes.com.br/direct_tasks').'/storage',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
 
@@ -67,7 +67,7 @@ return [
     */
 
     'links' => [
-        public_path('direct_tasks/storage') => storage_path('app/file_tasks'),
+        public_path('storage') => storage_path('app/public'),
     ],
 
 ];

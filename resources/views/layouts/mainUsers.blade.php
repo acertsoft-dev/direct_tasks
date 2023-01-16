@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/dist/ui/trumbowyg.min.css">
     <title>@yield('Title')</title>
 </head>
-<body style="height: 100vh">
+<body style="height: 100vh" onload="start()">
     <nav class="nav-left">
         <div class="nav-logo">
             <img src="/direct_tasks/public/imgs/acertsoft_logo.png" alt="logo acertsoft">

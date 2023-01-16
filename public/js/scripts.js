@@ -1,8 +1,10 @@
 const { forEach } = require("lodash");
 
-conosole.log("const modal = document.querySelector('.modal-container');");
-const modal = document.querySelector('.modal-container');
-var numConfirm = 0;
+function start(){
+    const modal = document.querySelector('.modal-container');
+    var numConfirm = 0;
+    return numConfirm, modal;
+}
     
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 

@@ -3,6 +3,7 @@ const { forEach } = require("lodash");
 const start = function(){
     const modal = document.querySelector('.modal-container');
     var numConfirm = 0;
+    return numConfirm;
 }
 
 start();

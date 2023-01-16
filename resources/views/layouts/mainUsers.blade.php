@@ -11,6 +11,7 @@
 </head>
 <body style="height: 100vh">
     <nav class="nav-left active">
+        <ion-icon class="closeOptions" name="close-circle-outline"></ion-icon>
         <div class="nav-logo">
             <img src="/direct_tasks/public/imgs/acertsoft_logo.png" alt="logo acertsoft">
         </div>

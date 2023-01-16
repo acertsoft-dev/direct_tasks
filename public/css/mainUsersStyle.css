@@ -151,6 +151,9 @@ body{
 .options{
     display: none;
 }
+.nav-logo ion-icon{
+    display: none;
+}
 
 @media(max-width: 1280px){
     .options{
@@ -158,25 +161,6 @@ body{
         position: fixed;
         top: 10px;
         left: 15px;
-    }
-    .options ion-icon{
-        font-size: 20vw;
-        color: white;
-    }
-    .options ion-icon:hover{
-        color: #3b82f6;
-    }
-    .active{
-        left: 7px;
-        animation: on-off 5ms linear;
-    }
-    @keyframes on-off {
-        from{
-            left: -300px;
-        }
-        to{
-            left: 7px;
-        }
     }
     body{
         display: flex;
@@ -186,5 +170,43 @@ body{
         z-index: 99;
         width: 300px;
         left: -300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 100px 1fr 80px;
+        grid-template-areas: 'option' 'nav-logo' 'nav-menu' 'card-user';
+    }
+    .options ion-icon{
+        font-size: 20vw;
+        color: white;
+    }
+    .options ion-icon:hover{
+        color: #3b82f6;
+    }
+    .active{
+        left: 0px;
+        animation-name: openClose;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+    }
+    @keyframes openClose {
+        from{
+            left: -300px;
+        }
+        to{
+            left: 0px;
+        }
+    }
+    .nav-logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .closeOptions{
+        display: inline;
+        font-size: 10vw;
+        color: white;
+        margin: 10px;
+        grid-area: option;
     }
 }

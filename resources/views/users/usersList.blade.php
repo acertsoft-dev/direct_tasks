@@ -1,5 +1,6 @@
 @extends('layouts.mainUsers')
 <link rel="stylesheet" href="/direct_tasks/public/css/usersListStyle.css">
+<link rel="shortcut icon" href="/direct_tasks/public/imgs/acertsoft.png" type="image/png">
 @section('Title', 'DirectTarefas - Lista de Usuários')
 
 @section('mainUsers')

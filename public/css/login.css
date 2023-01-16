@@ -89,6 +89,7 @@ body{
     .pageLogin{
         display: flex;
         height: 100%;
+        width: 100%;
     }
     .section-one{
         display: none;

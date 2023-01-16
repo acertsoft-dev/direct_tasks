@@ -1,5 +1,6 @@
 const modal = document.querySelector('.modal-container');
 var numConfirm = 0;
+let active = false;
 
 const { forEach } = require("lodash");
     
@@ -143,24 +144,11 @@ function previewFiles() {
     screen.style.display = 'flex';
 }
 
-/* Preview de imagens*/
-// function backImages(files){
-//     var tableUp = document.querySelector('#tableUp');
-//     var click = document.getElementById('click');
-//     const arrayImgs = files.split(';');
-
-//     arrayImgs.forEach(file => {
-//         var tr = document.createElement('tr');
-//         var td = document.createElement('td'); 
-//         var a = document.createElement('a');
-
-//         click.style.display = 'none';
-//         a.innerText = file;
-//         a.href = `{{ url("/tasks/6/edit/download/${file}") }}`;
-
-//         tableUp.appendChild(tr);
-//         tr.appendChild(td);
-//         td.appendChild(a);
-//     });
-//     console.log(arrayImgs);
-// }
+function openCloseOptions(){
+    let formNav = document.querySelector('.nav-left');
+    if(active == true){
+        formNav.classList.remove('active');
+    }else{
+        formNav.classList.add('active');
+    }
+}

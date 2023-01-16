@@ -11,7 +11,7 @@
 </head>
 <body style="height: 100vh">
     <nav class="nav-left active">
-        <ion-icon class="closeOptions" name="close-circle-outline"></ion-icon>
+        <ion-icon class="closeOptions" name="close-circle-outline" onclick="openCloseOptions()"></ion-icon>
         <div class="nav-logo">
             <img src="/direct_tasks/public/imgs/acertsoft_logo.png" alt="logo acertsoft">
         </div>
@@ -34,7 +34,7 @@
         </div>
     </nav>
     <div class="options">
-        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="menu-outline" onclick="openCloseOptions()"></ion-icon>
     </div>
     <section class="sect-right">
         @section('mainUsers')

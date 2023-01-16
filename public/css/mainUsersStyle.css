@@ -149,6 +149,9 @@ body{
 /* end sect-right*/
 
 @media screen and (max-width: 1280px){
+    body{
+        display: flex;
+    }
     .nav-left{
         display: block;
         position: absolute;

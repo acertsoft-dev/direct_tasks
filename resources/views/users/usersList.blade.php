@@ -83,3 +83,5 @@
         </div>
     </div>
 @endif
+
+<script src="/direct_tasks/public/js/scripts.js"></script>

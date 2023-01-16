@@ -148,7 +148,7 @@ body{
 }
 /* end sect-right*/
 
-@media screen and (max-width: 1280px){
+@media(max-width: 1280px){
     body{
         display: flex;
     }

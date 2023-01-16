@@ -89,6 +89,7 @@ body{
     .pageLogin{
         display: flex;
         align-items: center;
+        height: 100%;
     }
     .section-one{
         display: none;
@@ -99,5 +100,6 @@ body{
     .container-login{
         display: block;
         width: 100%;
+        height: 100%;
     }
 }

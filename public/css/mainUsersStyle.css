@@ -155,7 +155,7 @@ body{
 @media(max-width: 1280px){
     .options{
         display: block;
-        position: static;
+        position: fixed;
         top: 10px;
         left: 15px;
     }

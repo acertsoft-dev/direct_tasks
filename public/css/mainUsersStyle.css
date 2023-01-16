@@ -147,3 +147,13 @@ body{
     background-color: whitesmoke;
 }
 /* end sect-right*/
+
+@media screen and (max-width: 1280px){
+    .nav-left{
+        display: block;
+        position: absolute;
+        z-index: 99;
+        width: 300px;
+        left: -300px;
+    }
+}

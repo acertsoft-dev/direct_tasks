@@ -40,6 +40,6 @@ Route::delete('/versions/{id}', [VersionsController::class, 'destroy'])->name('v
 Route::get('/users', [UserController::class, 'showUsersList'])->name('users')->middleware('auth');
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->middleware('auth');
 Route::put('/users/{id}', [UserController::class, 'update'])->middleware('auth');
-Route::get('/createUser', [UserController::class, 'showCreateUser'])->name('createUser');//->middleware('auth');
-Route::post('/createUser',[UserController::class, 'createUser']);//->middleware('auth');
+Route::get('/createUser', [UserController::class, 'showCreateUser'])->name('createUser')->middleware('auth');
+Route::post('/createUser',[UserController::class, 'createUser'])->middleware('auth');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware('auth');

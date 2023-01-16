@@ -6,7 +6,7 @@ const { forEach } = require("lodash");
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `/projects/${id}`);
+        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/projects/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -19,7 +19,7 @@ function closeModalProjects(){
 function openModalVersions(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `/versions/${id}`);
+        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/versions/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -32,7 +32,7 @@ function closeModalVersions(){
 function openModalUsers(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `/users/${id}`);
+        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/users/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -45,7 +45,7 @@ function closeModalUsers(){
 function openModalTasks(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `{{ url('/tasks/${id}') }}`);
+        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/tasks/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }

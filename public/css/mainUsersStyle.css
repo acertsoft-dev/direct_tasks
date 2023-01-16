@@ -163,6 +163,9 @@ body{
         font-size: 20vw;
         color: white;
     }
+    .options ion-icon:hover, .options ion-icon:active{
+        color: #3b82f6;
+    }
     body{
         display: flex;
     }

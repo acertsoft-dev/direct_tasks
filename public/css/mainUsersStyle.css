@@ -160,7 +160,8 @@ body{
         left: 10px;
     }
     .options ion-icon{
-        font-size: 25px;
+        font-size: 10vw;
+        color: white;
     }
     body{
         display: flex;

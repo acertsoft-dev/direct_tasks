@@ -84,3 +84,21 @@ body{
     height: 40px;
     width: 80px;
 }
+
+@media screen and (max-width: 300px) {
+    .pageLogin{
+        display: flex;
+        height: 100%;
+    }
+    .section-one{
+        display: none;
+    }
+    .section-two{
+        display: none;
+    }
+    .container-login{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

@@ -38,7 +38,6 @@ body{
 
 /* nav-left */
 .nav-left{
-    left: 7px;
     height: 100%;
     grid-area: nav-primary;
     background-color: #253140;
@@ -154,6 +153,15 @@ body{
 }
 
 @media(max-width: 1280px){
+    .options{
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    .options ion-icon{
+        font-size: 25px;
+    }
     body{
         display: flex;
     }

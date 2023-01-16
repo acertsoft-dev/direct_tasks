@@ -166,6 +166,18 @@ body{
     .options ion-icon:hover{
         color: #3b82f6;
     }
+    .active{
+        left: 7px;
+        animation: on-off 5ms linear;
+    }
+    @keyframes on-off {
+        from{
+            left: -300px;
+        }
+        to{
+            left: 7px;
+        }
+    }
     body{
         display: flex;
     }

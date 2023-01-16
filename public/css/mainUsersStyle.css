@@ -38,6 +38,7 @@ body{
 
 /* nav-left */
 .nav-left{
+    left: 7px;
     height: 100%;
     grid-area: nav-primary;
     background-color: #253140;
@@ -148,12 +149,15 @@ body{
 }
 /* end sect-right*/
 
+.options{
+    display: none;
+}
+
 @media(max-width: 1280px){
     body{
         display: flex;
     }
     .nav-left{
-        display: block;
         position: absolute;
         z-index: 99;
         width: 300px;

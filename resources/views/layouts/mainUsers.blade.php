@@ -32,6 +32,9 @@
         <a href="{{ route('logout') }}"><button class="btns-exit drop-shadow-lg">Sair</button></a>
         </div>
     </nav>
+    <div class="options">
+        <ion-icon name="menu-outline"></ion-icon>
+    </div>
     <section class="sect-right">
         @section('mainUsers')
         

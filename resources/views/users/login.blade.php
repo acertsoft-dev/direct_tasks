@@ -26,7 +26,7 @@
                 <div class="w-full max-w-md space-y-8">
                     <div>
                         <img class="mx-auto w-auto logo-login" src="/direct_tasks/public/imgs/acertsoft.png" alt="Your Company">
-                        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Entrar no sistema</h2>
+                        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Entrar</h2>
                     </div>
                     <form class="mt-8 space-y-6" action={{ url('login') }} method="POST">
                         @csrf

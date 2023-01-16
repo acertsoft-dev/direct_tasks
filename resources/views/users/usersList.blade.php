@@ -1,5 +1,4 @@
 @extends('layouts.mainUsers')
-@extends('layouts.main')
 <link rel="stylesheet" href="/direct_tasks/public/css/usersListStyle.css">
 @section('Title', 'DirectTarefas - Lista de Usuários')
 

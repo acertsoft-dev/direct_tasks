@@ -59,7 +59,7 @@
         </div>
     </section>
 @endsection
-    <div class="modal-container">
+    <div class="modal-container active">
         <div class="modal drop-shadow-md">
             <ion-icon name="alert-circle-outline"></ion-icon>
             <h2>Aviso!!!</h2>

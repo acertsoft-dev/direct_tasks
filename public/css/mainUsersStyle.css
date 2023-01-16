@@ -157,10 +157,10 @@ body{
         display: block;
         position: fixed;
         top: 10px;
-        left: 10px;
+        left: 15px;
     }
     .options ion-icon{
-        font-size: 10vw;
+        font-size: 20vw;
         color: white;
     }
     body{

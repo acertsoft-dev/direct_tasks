@@ -148,7 +148,9 @@ function openCloseOptions(){
     let formNav = document.querySelector('.nav-left');
     if(active == true){
         formNav.classList.remove('active');
+        return active = false;
     }else{
         formNav.classList.add('active');
+        return active = true;
     }
 }

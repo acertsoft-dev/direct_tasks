@@ -302,6 +302,3 @@
         </div>
     </section>
 @endsection
-
-
-<script src="/direct_tasks/public/js/scripts.js"></script>

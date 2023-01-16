@@ -71,7 +71,6 @@
         </div>
     </div>
 </div>
-
 @if ($errors->any())
     <div class="box-alert">
         <div class="alert rounded-md drop-shadow-lg">

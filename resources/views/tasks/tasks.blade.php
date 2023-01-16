@@ -75,10 +75,7 @@
                 <button class="btnClose drop-shadow-md" onclick="closeModalTasks()">Cancelar</button>
             </div>
         </div>
-    </div>
-
-<script src="/direct_tasks/public/js/scripts.js"></script>
-    
+    </div>    
 @if ($errors->any())
     <div class="box-alert">
         <div class="alert rounded-md drop-shadow-lg">

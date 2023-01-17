@@ -162,7 +162,7 @@ body{
 @media(max-width: 800px){
     .options{
         display: block;
-        position: relative;
+        position: absolute;
         top: 1px;
         left: 1px;
     }

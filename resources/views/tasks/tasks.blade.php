@@ -13,7 +13,7 @@
                 <button class="btn rounded shadow-md bg-cyan-900 active:shadow-inner active:bg-cyan-600 hover:bg-sky-600"><a href="{{ route('createTasks') }}" method="GET">Novo</a></button>
             </div>
             <div class="search-body">
-                <form action="/tasks" method="get" class="search-projects">
+                <form action="{{ url('/tasks') }}" method="get" class="search-projects">
                     <ion-icon style="--ionicon-stroke-width: 45px; padding: 8px; font-size: 16px; border: solid 1px rgb(180, 180, 180);" class="shadow-md rounded-l-lg" name="search-outline"></ion-icon>
                     <input class="shadow-md focus:outline-none" style="border-top: solid 1px rgb(180, 180, 180); border-bottom: solid 1px rgb(180, 180, 180);" type="number" id="search" name="search" placeholder="PESQUISA POR ID...">
                     <button class="btn shadow-md bg-cyan-900 active:shadow-inner active:bg-cyan-600 hover:bg-sky-600 rounded-r-lg">Pesquisar</button>

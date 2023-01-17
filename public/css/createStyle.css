@@ -230,3 +230,11 @@
     height: 40px;
     width: 80px;
 }
+
+@media(max-width: 800px){
+    .right-page{
+        width: 100vw;
+        height: 100vh;
+        padding-top: 35px;
+    }
+}

@@ -237,4 +237,8 @@
         height: 100vh;
         padding-top: 35px;
     }
+    .formFron{
+        width: 98vw;
+        height: 98vh;
+    }
 }

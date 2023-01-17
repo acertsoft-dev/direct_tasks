@@ -274,7 +274,7 @@ span{
         width: 90%;
     }
     .view-projects{
-        margin: 0;
+        margin: 10px 0;
         height: 100vh;
         width: 100vw;
         overflow: hidden;
@@ -283,5 +283,8 @@ span{
         height: 100vh;
         width: 100vw;
         overflow: scroll;
+    }
+    .box-project table thead th{
+        padding: 3px 40px 3px 5px;
     }
 }

@@ -249,7 +249,7 @@ span{
 }
 /* end Modal*/
 
-@media(max-width: 1280px){
+@media(max-width: 800px){
     .body-projects{
         width: 100%;
         height: 100vh;

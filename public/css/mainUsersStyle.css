@@ -155,8 +155,11 @@ body{
 .nav-logo ion-icon{
     display: none;
 }
+.closeOptions{
+    display: none;
+}
 
-@media(max-width: 1280px){
+@media(max-width: 800px){
     .options{
         display: block;
         position: absolute;

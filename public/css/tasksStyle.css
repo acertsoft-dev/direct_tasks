@@ -251,9 +251,9 @@ span{
 
 @media(max-width: 800px){
     .body-projects{
-        width: 100%;
+        width: 100vw;
         height: 100vh;
-        padding-top: 40px;
+        padding-top: 85px;
     }
     .btns-projects .buttons-top{
         margin-bottom: 5px;

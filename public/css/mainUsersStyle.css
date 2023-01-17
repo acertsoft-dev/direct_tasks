@@ -172,7 +172,7 @@ body{
         background-color: #11182754;
     }
     .nav-left{
-        position: absolute;
+        position: fixed;
         z-index: 99;
         width: 300px;
         left: -300px;

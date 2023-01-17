@@ -33,6 +33,7 @@ body{
     grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'nav-primary section-primary';
+    background-color: rgba(2, 2, 2, 0.9);
 }
 /* end body*/
 

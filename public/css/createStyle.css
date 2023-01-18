@@ -256,4 +256,8 @@
     .formFron form .form-inputs .div-form #preview{
         margin: 0;
     }
+    .formFron form .form-inputs .div-form .inputs-primary .div-inputs input, 
+    .formFron form .form-inputs .div-form .inputs-primary .div-inputs select{
+        align-items: center;
+    }
 }

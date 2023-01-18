@@ -10,7 +10,7 @@
         </div>
         <div class="readyTasks">
             <h2>Tarefas finalizadas</h2>
-            <span name="numTasksFinished">{{$tasksUser}}</span>
+            <span name="numTasksFinished">{{$tasksUser->status}}</span>
         </div>
         <div class="warnings">
             <table>

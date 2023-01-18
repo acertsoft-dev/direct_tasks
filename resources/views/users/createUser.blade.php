@@ -26,7 +26,7 @@
                                 </span>
                             </div>
                             @if(isset($user))
-                                <input type="text" name="id" id="id" placeholder=" - {{$user->id}}" disabled>
+                                <input type="text" name="id" id="id" placeholder="{{$user->id}}" disabled>
                             @else
                                 <input type="text" name="id" id="id" disabled>
                             @endif

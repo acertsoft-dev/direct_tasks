@@ -241,10 +241,11 @@
         width: 98vw;
         height: 98vh;
     }
-    .form-inputs{
+    .formFron form .form-inputs .div-form{
         flex-direction: column;
     }
-    .inputs-primary{
+    .formFron form .form-inputs .div-form .inputs-primary{
+        flex-direction: column;
         display: flex;
         flex-direction: column;
         width: 88%;

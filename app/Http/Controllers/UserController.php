@@ -21,6 +21,12 @@ class UserController extends Controller
 
     public function home()
     {
+        $tasksUser = Tasks::where([
+            ['id_user','LIKE','%'. Auth::user()->id .'%']
+        ]);
+
+        dd($tasksUser);
+
         return view('users.homeUser');
     }
 

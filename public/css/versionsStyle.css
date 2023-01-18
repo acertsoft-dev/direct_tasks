@@ -250,10 +250,11 @@ span{
         padding-top: 85px;
     }
     .btns-projects .buttons-top{
-        margin-bottom: 10px;
+        margin: 0 0 10px 20px;
     }
     .btns-projects{
         justify-content: center;
+        margin: 0;
     }
     .btn{
         font-size: 20px;

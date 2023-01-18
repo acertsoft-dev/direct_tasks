@@ -252,8 +252,6 @@
         flex-direction: column;
         width: 88%;
         margin: 10px auto;
-        justify-content: center;
-        align-items: center;
     }
     .formFron form .form-inputs .div-form #preview{
         margin: 0;

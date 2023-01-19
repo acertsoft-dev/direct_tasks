@@ -29,30 +29,6 @@
                     <tr>
                         <td><span>Dia 18/11/2022 - </span>não esquecer da reunião as 07:00</td>
                     </tr>
-                    <tr>
-                        <td><span>Dia 17/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 16/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 15/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 14/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 13/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 12/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 11/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
-                    <tr>
-                        <td><span>Dia 10/11/2022 - </span>não esquecer da reunião as 07:00</td>
-                    </tr>
                 </tbody>
             </table>
         </div>

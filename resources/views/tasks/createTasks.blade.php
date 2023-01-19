@@ -77,7 +77,7 @@
                                 </div>
                                 @if(isset($task))
                                     <select name="text" name="id_version" id="id_version" required>
-                                        <option value="{{$task->id_version}}">
+                                        <option value="{{$task->id_version}}" selected hidden>
                                             @foreach($versions_projects as $version_project)
                                                 @if($version_project->id == $task->id_version)
                                                     {{$version_project->name}}
@@ -104,7 +104,7 @@
                                 </div>
                                 @if(isset($task))
                                     <select type="text" name="service" id="service" required>
-                                        <option value="{{$task->service}}" >{{$task->service}}</option>
+                                        <option value="{{$task->service}}" selected hidden>{{$task->service}}</option>
                                         <option value="Desenvolvimento">Desenvolvimento</option>
                                         <option value="Correção">Correção</option>
                                         <option value="Melhoria">Melhoria</option>
@@ -160,13 +160,16 @@
                                 </div>
                                 @if(isset($task))
                                     <select type="text" name="id_user" id="id_user" required>
-                                        <option value="{{$task->id_user}}">
+                                        <option value="{{$task->id_user}}" selected hidden>
                                             @foreach($users as $user)
                                                 @if($user->id == $task->id_user)
                                                     {{$user->name}}
                                                 @endif
                                             @endforeach
                                         </option>
+                                        @foreach ($users as $user)
+                                            <option value="{{$user->id}}">{{$user->name}}</option>
+                                        @endforeach
                                     </select>
                                 @else
                                     <select type="text" name="id_user" id="id_user" required>

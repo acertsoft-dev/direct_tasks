@@ -9,8 +9,8 @@
             <h1>Bem vindo {{ Auth::user()->name }}</h1>
         </div>
         <div class="readyTasks">
-            <h2>Tarefas finalizadas</h2>
-            <span name="numTasksFinished">9999</span>
+            <h2>Tarefas no seu nome</h2>
+            <span id="viewTasks">{{$numTasks}}</span>
         </div>
         <div class="warnings">
             <table>

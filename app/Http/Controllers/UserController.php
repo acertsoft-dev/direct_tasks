@@ -13,15 +13,46 @@ class UserController extends Controller
 {
     public function defineRouteMainOrLogin()
     {
-        if (Auth::check() === true)
-            return view('users.homeUser');
+        if (Auth::check() === true){
+            $tasksForUser = [];
+            $numTasks = '';
+            $tasks = Tasks::where([
+                ['id_user', 'like', '%'. Auth::user()->id .'%']
+            ])->paginate();
+
+            foreach($tasks as $tasksUser){
+                if($tasksUser->id_user == Auth::user()->id && ($tasksUser->status == 'Em aberto' || $tasksUser->status == 'Em andamento' )){
+                    array_push($tasksForUser, $tasksUser);
+                }
+            };
+            $numTasks = strval(sizeof($tasksForUser));
+            
+            //dd($tasksForUser);
+
+            return view('users.homeUser', ['numTasks' => $numTasks]);
+        }
         else
             return redirect('/login');
     }
 
     public function home()
     {   
-        return view('users.homeUser');
+        $tasksForUser = [];
+        $numTasks = '';
+        $tasks = Tasks::where([
+            ['id_user', 'like', '%'. Auth::user()->id .'%']
+        ])->paginate();
+
+        foreach($tasks as $tasksUser){
+            if($tasksUser->id_user == Auth::user()->id && ($tasksUser->status == 'Em aberto' || $tasksUser->status == 'Em andamento' )){
+                array_push($tasksForUser, $tasksUser);
+            }
+        };
+        $numTasks = strval(sizeof($tasksForUser));
+        
+        //dd($tasksForUser);
+
+        return view('users.homeUser', ['numTasks' => $numTasks]);
     }
 
     public function showLogin()

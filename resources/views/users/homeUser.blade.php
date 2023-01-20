@@ -20,13 +20,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><span>Dia 29/11/2022 - </span>deixar o cartão ponto sobre a mesa do Admin</td>
+                        <td><span>Dia ??/??/???? - </span>Em breve...</td>
                     </tr>
                     <tr>
-                        <td><span>Dia 15/11/2022 - </span>será feriado e não tera espediente, somente o plantão</td>
+                        <td><span>Dia ??/??/???? - </span>Atualizando...</td>
                     </tr>
                     <tr>
-                        <td><span>Dia 18/11/2022 - </span>não esquecer da reunião as 07:00</td>
+                        <td><span>Dia ??/??/???? - </span>Verificando informações...</td>
+                    </tr>
+                    <tr>
+                        <td><span>Dia ??/??/???? - </span>Aguarde...</td>
                     </tr>
                 </tbody>
             </table>

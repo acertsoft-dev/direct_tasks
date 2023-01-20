@@ -7,52 +7,51 @@ use App\Models\Tasks;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
-    public function defineRouteMainOrLogin()
+
+    public function home()
     {
-        if (Auth::check() === true){
+        if (Auth::check() === true){    //Busca tarefas em aberto e em andamento que estão no nome do usuário logado:
             $tasksForUser = [];
-            $numTasks = '';
+            $tasksCompleted = [];
             $tasks = Tasks::where([
                 ['id_user', 'like', '%'. Auth::user()->id .'%']
             ])->paginate();
-
             foreach($tasks as $tasksUser){
                 if($tasksUser->id_user == Auth::user()->id && ($tasksUser->status == 'Em aberto' || $tasksUser->status == 'Em andamento' )){
                     array_push($tasksForUser, $tasksUser);
+                }elseif($tasksUser->id_user == Auth::user()->id && $tasksUser->status == 'Concluida'){
+                    array_push($tasksCompleted, $tasksUser);
                 }
             };
-            $numTasks = strval(sizeof($tasksForUser));
+
+            $tasksOpen = [];
+            $tasksProgress = [];
+            $tasksDelay = [];
             
-            //dd($tasksForUser);
 
-            return view('users.homeUser', ['numTasks' => $numTasks]);
-        }
-        else
-            return redirect('/login');
-    }
-
-    public function home()
-    {   
-        $tasksForUser = [];
-        $numTasks = '';
-        $tasks = Tasks::where([
-            ['id_user', 'like', '%'. Auth::user()->id .'%']
-        ])->paginate();
-
-        foreach($tasks as $tasksUser){
-            if($tasksUser->id_user == Auth::user()->id && ($tasksUser->status == 'Em aberto' || $tasksUser->status == 'Em andamento' )){
-                array_push($tasksForUser, $tasksUser);
+            foreach($tasksForUser as $tasksSeparated){
+                $date = new Carbon();
+                if($tasksSeparated->status == 'Em aberto' && $tasksSeparated->date_limit <= $date){
+                    array_push($tasksDelay, $tasksSeparated);
+                }elseif($tasksSeparated->status == 'Em aberto'){
+                    array_push($tasksOpen, $tasksSeparated);
+                }elseif($tasksSeparated->status == 'Em andamento'){
+                    array_push($tasksProgress, $tasksSeparated);
+                }else{
+                    dd($tasksSeparated);
+                }
             }
-        };
-        $numTasks = strval(sizeof($tasksForUser));
-        
-        //dd($tasksForUser);
 
-        return view('users.homeUser', ['numTasks' => $numTasks]);
+            //dd($tasksDelay, $tasksProgress, $tasksCompleted, $tasksOpen);
+
+            return view('users.homeUser', ['numTasks' => strval(sizeof($tasksForUser)), 'tasksOpen' => $tasksOpen, 'tasksProgress' => $tasksProgress, 'tasksCompleted' => $tasksCompleted, 'tasksDelay' => $tasksDelay]);
+        }else{
+            return redirect('/login');
+        }
     }
 
     public function showLogin()

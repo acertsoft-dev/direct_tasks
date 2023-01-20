@@ -9,8 +9,7 @@
             <h1>Bem vindo {{ Auth::user()->name }}</h1>
         </div>
         <div class="readyTasks">
-            <h2>Tarefas no seu nome</h2>
-            <span id="viewTasks">{{$numTasks}}</span>
+            <p>Minhas Tarefas :  <span id="viewTasks"> {{ $numTasks}}</span></p>
         </div>
         <div class="warnings">
             <table>
@@ -40,15 +39,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><span class="late"></span><span class="hTxt">Data de finalização: 10/11/2022 - </span> Finalizar novo CRM</td>
-                    </tr>
-                    <tr>
-                        <td><span class="progress"></span><span class="hTxt">Data de finalização: 15/11/2022 - </span> Finalizar tela de inicio</td>
-                    </tr>
-                    <tr>
-                        <td><span class="opened"></span><span class="hTxt">Data de finalização: 15/11/2022 - </span> Finalizar tela de inicio</td>
-                    </tr>
+                    @if(count($tasksProgress))
+                        @foreach($tasksProgress as $tasksPro)
+                            <tr>
+                                <td><span class="hTxt"><strong class="progress"></strong>Data de finalização: {{\Carbon\Carbon::parse($tasksPro->date_limit)->format('d/m/Y')}} - </span> {{str_ireplace(array('&lt;b&gt;','&lt;/b&gt;','&gt;','&lt;','/','<p>','</p>', '<h2>', '</h2>', '&nbsp;', '<strong>', '</strong>', '<span>', '</span>', '<em>', '</em>', '<del>', '</del>', '<sup>', '</sup>', '<sub style="vertical-align: sub;">', '</sub>', '<sup style="vertical-align: super;">', '<span style="font-size: 12px;">', '</br>'), '', substr($tasksPro->description, 0, 45))}}...</td>
+                            </tr>
+                        @endforeach
+                    @endif
+                    @if(count($tasksDelay))
+                        @foreach($tasksDelay as $tasksDel)
+                            <tr>
+                                <td><span class="hTxt"><strong class="late"></strong> Data de finalização: {{\Carbon\Carbon::parse($tasksDel->date_limit)->format('d/m/Y')}} - </span> {{str_ireplace(array('&lt;b&gt;','&lt;/b&gt;','&gt;','&lt;','/','<p>','</p>', '<h2>', '</h2>', '&nbsp;', '<strong>', '</strong>', '<span>', '</span>', '<em>', '</em>', '<del>', '</del>', '<sup>', '</sup>', '<sub style="vertical-align: sub;">', '</sub>', '<sup style="vertical-align: super;">', '<span style="font-size: 12px;">', '</br>'), '', substr($tasksDel->description, 0, 45))}}...</td>
+                            </tr>
+                        @endforeach
+                    @endif
+                    @if(count($tasksOpen))
+                        @foreach($tasksOpen as $tasksOpe)
+                        <tr>
+                            <td><span class="hTxt"><strong class="opened"></strong>Data de finalização: {{\Carbon\Carbon::parse($tasksOpe->date_limit)->format('d/m/Y')}} - </span> {{str_ireplace(array('&lt;b&gt;','&lt;/b&gt;','&gt;','&lt;','/','<p>','</p>', '<h2>', '</h2>', '&nbsp;', '<strong>', '</strong>', '<span>', '</span>', '<em>', '</em>', '<del>', '</del>', '<sup>', '</sup>', '<sub style="vertical-align: sub;">', '</sub>', '<sup style="vertical-align: super;">', '<span style="font-size: 12px;">', '</br>'), '', substr($tasksOpe->description, 0, 45))}}...</td>
+                        </tr>
+                        @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>

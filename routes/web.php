@@ -7,7 +7,7 @@ use App\Http\Controllers\VersionsController;
 use App\Http\Controllers\TasksController;
 use GuzzleHttp\Middleware;
 
-Route::get('/', [UserController::class, 'defineRouteMainOrLogin'])->middleware('auth');
+Route::get('/', [UserController::class, 'home'])->middleware('auth');
 Route::get('login', [UserController::class, 'showLogin'])->name('login');
 Route::post('login',[UserController::class, 'doLogin']);
 Route::get('logout',[UserController::class, 'doLogout'])->name('logout');

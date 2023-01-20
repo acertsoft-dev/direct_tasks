@@ -9,7 +9,7 @@
             <h1>Bem vindo {{ Auth::user()->name }}</h1>
         </div>
         <div class="readyTasks">
-            <p>Minhas Tarefas :  <span id="viewTasks"> {{ $numTasks}}</span></p>
+            <p>Tarefas no seu nome :  <span id="viewTasks"> {{ $numTasks}}</span></p>
         </div>
         <div class="warnings">
             <table>

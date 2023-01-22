@@ -84,6 +84,7 @@ class TasksController extends Controller
                 'solution' => request('solution'),
                 'name_files' => $stringFiles,
                 '_toke' => request('_token'),
+                'migrate' => request('temp'),
             ]);
 
             $task->save();

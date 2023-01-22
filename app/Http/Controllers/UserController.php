@@ -14,7 +14,8 @@ class UserController extends Controller
 
     public function home()
     {
-        if (Auth::check() === true){    //Busca tarefas em aberto e em andamento que estão no nome do usuário logado:
+        if (Auth::check() === true){    
+            //Busca tarefas em aberto e em andamento que estão no nome do usuário logado:
             $tasksForUser = [];
             $tasksCompleted = [];
             $tasks = Tasks::where([
@@ -27,12 +28,9 @@ class UserController extends Controller
                     array_push($tasksCompleted, $tasksUser);
                 }
             };
-
             $tasksOpen = [];
             $tasksProgress = [];
             $tasksDelay = [];
-            
-
             foreach($tasksForUser as $tasksSeparated){
                 $date = new Carbon();
                 if($tasksSeparated->status == 'Em aberto' && $tasksSeparated->date_limit <= $date){
@@ -46,7 +44,13 @@ class UserController extends Controller
                 }
             }
 
-            //dd($tasksDelay, $tasksProgress, $tasksCompleted, $tasksOpen);
+            //Tempo entre duas datas
+            // $entrada = new Carbon('2023-01-20 11:30:00'); 
+            // $saida = new Carbon();
+
+            // $intervalo = $entrada->diff($saida->format('Y-m-d H:i:s'));
+            
+            // dd("Tempo de tarefa: " . $intervalo->h . ":" . $intervalo->i . ":" . $intervalo->s,);
 
             return view('users.homeUser', ['numTasks' => strval(sizeof($tasksForUser)), 'tasksOpen' => $tasksOpen, 'tasksProgress' => $tasksProgress, 'tasksCompleted' => $tasksCompleted, 'tasksDelay' => $tasksDelay]);
         }else{

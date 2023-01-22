@@ -1,13 +1,13 @@
 const modal = document.querySelector('.modal-container');
-var numConfirm = 0;
+var statusTemp = '';
+let numConfirm = 0;
 let active = false;
 
-const { forEach } = require("lodash");
-    
+
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/projects/${id}`);
+        formDel.setAttribute('action', `/projects/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -20,7 +20,7 @@ function closeModalProjects(){
 function openModalVersions(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/versions/${id}`);
+        formDel.setAttribute('action', `/versions/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -33,7 +33,7 @@ function closeModalVersions(){
 function openModalUsers(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/users/${id}`);
+        formDel.setAttribute('action', `/users/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -46,7 +46,7 @@ function closeModalUsers(){
 function openModalTasks(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/tasks/${id}`);
+        formDel.setAttribute('action', `/tasks/${id}`);
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -154,3 +154,197 @@ function openCloseOptions(){
         return active = true;
     }
 }
+
+function adicionaZero(numero){
+    if(numero < 9){
+        return "0" + numero;
+    }else{
+        return numero;
+    }
+}
+
+function iniciaContagem(){
+    if(statusTemp == '' || statusTemp == 'P'){    
+        var descricao = document.getElementById('description');
+        var temp = document.getElementById('temp');
+        var newDate = new Date;
+        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
+    
+        temp.value += (date.toString() + ';');
+        descricao.value += ('\n' + 'Iniciada a tarefa: ' + date.toString());
+        
+        return statusTemp = 'I';
+    }
+}
+
+function pausaContagem(){
+    if(statusTemp == 'I'){
+        var descricao = document.getElementById('description');
+        var temp = document.getElementById('temp');
+        var newDate = new Date;
+        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
+
+        temp.value += (date.toString() + ';');
+        descricao.value += ('\n' + 'Pausado a tarefa: ' + date.toString());
+
+        return statusTemp = 'P';
+    }
+}
+
+function finalizaContagem(){
+    if(statusTemp == 'I'){
+        var descricao = document.getElementById('description');
+        var temp = document.getElementById('temp');
+        var newDate = new Date;
+        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
+
+        temp.value += (date.toString());
+        descricao.value += ('\n' + 'Finalizado a tarefa: ' + date.toString());
+
+        statusTemp = 'F';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Preview de imagens*/
+// function backImages(files){
+//     var tableUp = document.querySelector('#tableUp');
+//     var click = document.getElementById('click');
+//     const arrayImgs = files.split(';');
+
+//     arrayImgs.forEach(file => {
+//         var tr = document.createElement('tr');
+//         var td = document.createElement('td'); 
+//         var a = document.createElement('a');
+
+//         click.style.display = 'none';
+//         a.innerText = file;
+//         a.href = `{{ url("/tasks/6/edit/download/${file}") }}`;
+
+//         tableUp.appendChild(tr);
+//         tr.appendChild(td);
+//         td.appendChild(a);
+//     });
+//     console.log(arrayImgs);
+// }
+    
+const { forEach } = require("lodash");

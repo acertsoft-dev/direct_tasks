@@ -129,7 +129,7 @@
                                 @if(isset($task))
                                     <input type="datetime-local" name="date_start" id="date_start" required value="{{$task->date_start}}" max="9999-12-31 23:59:59">
                                 @else
-                                    <input type="datetime-local" name="date_start" id="date_start" onchange="trasValor(this.value)" required value="{{$nowDate}}" max="9999-12-31 23:59:59">
+                                    <input type="datetime-local" name="date_start" id="date_start" required value="{{$nowDate}}" max="9999-12-31 23:59:59">
                                 @endif
                             </div>
                         </div>

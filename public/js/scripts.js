@@ -1,8 +1,11 @@
 const modal = document.querySelector('.modal-container');
-var statusTemp = '';
 let numConfirm = 0;
 let active = false;
 
+function startDate(){
+    var dateState = document.getElementById('date_start');
+    
+}
 
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 

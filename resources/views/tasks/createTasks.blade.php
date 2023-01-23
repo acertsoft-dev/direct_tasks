@@ -127,9 +127,9 @@
                                     </span>
                                 </div>
                                 @if(isset($task))
-                                    <input type="date" name="date_start" id="date_start" required value="{{$task->date_start}}" max="9999-12-31">
+                                    <input type="datetime-local" name="date_start" id="date_start" required value="{{$task->date_start}}" max="9999-12-31">
                                 @else
-                                    <input type="date" name="date_start" id="date_start" onchange="trasValor(this.value)" required value="{{$nowDate}}" max="9999-12-31">
+                                    <input type="datetime-local" name="date_start" id="date_start" onchange="trasValor(this.value)" required value="{{$nowDate}}" max="9999-12-31">
                                 @endif
                             </div>
                         </div>
@@ -142,9 +142,9 @@
                                     </span>
                                 </div>
                                 @if(isset($task))
-                                    <input type="date" name="date_limit" id="date_limit" required value="{{$task->date_limit}}" max="9999-12-31">
+                                    <input type="datetime-local" name="date_limit" id="date_limit" required value="{{$task->date_limit}}" max="9999-12-31">
                                 @else
-                                    <input type="date" name="date_limit" id="date_limit" onchange="trasValor(this.value)" required max="9999-12-31">
+                                    <input type="datetime-local" name="date_limit" id="date_limit" onchange="trasValor(this.value)" required max="9999-12-31">
                                 @endif
                             </div>
                         </div>

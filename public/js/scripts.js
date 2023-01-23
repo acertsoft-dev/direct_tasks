@@ -155,55 +155,6 @@ function openCloseOptions(){
     }
 }
 
-function adicionaZero(numero){
-    if(numero < 9){
-        return "0" + numero;
-    }else{
-        return numero;
-    }
-}
-
-function iniciaContagem(){
-    if(statusTemp == '' || statusTemp == 'P'){    
-        var descricao = document.getElementById('description');
-        var temp = document.getElementById('temp');
-        var newDate = new Date;
-        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
-    
-        temp.value += (date.toString() + ';');
-        descricao.value += ('\n' + 'Iniciada a tarefa: ' + date.toString());
-        
-        return statusTemp = 'I';
-    }
-}
-
-function pausaContagem(){
-    if(statusTemp == 'I'){
-        var descricao = document.getElementById('description');
-        var temp = document.getElementById('temp');
-        var newDate = new Date;
-        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
-
-        temp.value += (date.toString() + ';');
-        descricao.value += ('\n' + 'Pausado a tarefa: ' + date.toString());
-
-        return statusTemp = 'P';
-    }
-}
-
-function finalizaContagem(){
-    if(statusTemp == 'I'){
-        var descricao = document.getElementById('description');
-        var temp = document.getElementById('temp');
-        var newDate = new Date;
-        var date = (adicionaZero(newDate.getDate().toString())) + '/' + (adicionaZero(newDate.getMonth() + 1).toString()) + '/' + (adicionaZero(newDate.getFullYear().toString())) + ' ' + (adicionaZero(newDate.getHours().toString())) + ':' + (adicionaZero(newDate.getMinutes().toString()));
-
-        temp.value += (date.toString());
-        descricao.value += ('\n' + 'Finalizado a tarefa: ' + date.toString());
-
-        statusTemp = 'F';
-    }
-}
 
 
 

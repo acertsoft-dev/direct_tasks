@@ -14,7 +14,7 @@ class AddTemp extends Migration
     public function up()
     {
         Schema::table('tasks', function(Blueprint $table){
-            $table->string('temp')->nullable();
+            $table->text('temp')->nullable();
         });
     }
 

@@ -44,14 +44,6 @@ class UserController extends Controller
                 }
             }
 
-            //Tempo entre duas datas
-            // $entrada = new Carbon('2023-01-20 11:30:00'); 
-            // $saida = new Carbon();
-
-            // $intervalo = $entrada->diff($saida->format('Y-m-d H:i:s'));
-            
-            // dd("Tempo de tarefa: " . $intervalo->h . ":" . $intervalo->i . ":" . $intervalo->s,);
-
             return view('users.homeUser', ['numTasks' => strval(sizeof($tasksForUser)), 'tasksOpen' => $tasksOpen, 'tasksProgress' => $tasksProgress, 'tasksCompleted' => $tasksCompleted, 'tasksDelay' => $tasksDelay]);
         }else{
             return redirect('/login');

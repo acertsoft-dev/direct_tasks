@@ -42,7 +42,7 @@ class TasksController extends Controller
 
     public function showCreateTasks()
     {
-        $nowDate = Carbon::now()->toDateString();
+        $nowDate = Carbon::now()->format('d-m-Y H:i');
 
         dd($nowDate);
 

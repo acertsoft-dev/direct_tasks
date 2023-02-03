@@ -10,7 +10,7 @@ function startDate(){
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `{{ url('/projects/${id}') }}`);
+        formDel.setAttribute('action', `&#123;&#123;{ url('/projects/${id}') &#125;&#125;`);
         numConfirm = 1;
         return modal.classList.add('active');
     }

@@ -49,7 +49,7 @@ function closeModalUsers(){
 function openModalTasks(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.action = `{{ url('/tasks/${id}') }}`;
+        formDel.action = `/%7B%7B%20url('/tasks/${id}')%20%7D%7D`;
         numConfirm = 1;
         return modal.classList.add('active');
     }

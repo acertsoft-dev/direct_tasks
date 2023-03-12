@@ -49,7 +49,7 @@ function closeModalUsers(){
 function openModalTasks(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.action = formDel.action + id;
+        formDel.action = formDel.action + '/' + id;
         numConfirm = 1;
         return modal.classList.add('active');
     }

@@ -67,7 +67,7 @@
             <span>Confirme a exclusão, caso confirmado, o registro será apagado permanentemente.</span>
             <hr />
             <div class="btns">
-                <form style="display: inline" id="del-aviso" method="POST" enctype="multipart/form-data">
+                <form style="display: inline" action="" id="del-aviso" method="POST" enctype="multipart/form-data">
                     @method('DELETE')
                     @csrf
                     <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>

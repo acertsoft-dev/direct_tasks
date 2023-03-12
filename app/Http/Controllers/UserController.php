@@ -59,11 +59,11 @@ class UserController extends Controller
     {
 
         $request->validate([
-            'email' => 'required',
+            'name' => 'required',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
             return redirect('/');
         }
 

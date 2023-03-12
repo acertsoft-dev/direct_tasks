@@ -69,7 +69,7 @@
             <hr />
             <div class="btns">
                 @foreach ($tasks as $task)
-                    <form style="display: inline" action="{{ url('/tasks/{{$task->$id}}') }}" id="del-aviso" method="POST" enctype="multipart/form-data">
+                    <form style="display: inline" action="{{ url('/tasks/'.$task->id) }}" id="del-aviso" method="POST" enctype="multipart/form-data">
                         @method('DELETE')
                         @csrf
                         <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>

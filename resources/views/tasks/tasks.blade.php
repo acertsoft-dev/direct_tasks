@@ -48,23 +48,6 @@
                                     <a href="{{url("/pdfTask/$task->id")}}" target="_blank">PDF</a>
                                 </td>
                             </tr>
-                            <div class="modal-container">
-                                <div class="modal drop-shadow-md">
-                                    <ion-icon name="alert-circle-outline"></ion-icon>
-                                    <h2>Aviso!!!</h2>
-                                    <hr />
-                                    <span>Confirme a exclusão, caso confirmado, o registro será apagado permanentemente.</span>
-                                    <hr />
-                                    <div class="btns">
-                                        <form style="display: inline" action="{{ url('/tasks/'.$task->id) }}" id="del-aviso" method="POST" enctype="multipart/form-data">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>
-                                        </form>
-                                        <button class="btnClose drop-shadow-md" onclick="closeModalTasks()">Cancelar</button>
-                                    </div>
-                                </div>
-                            </div>
                         @endforeach
                     @endif
                     </tbody>
@@ -76,7 +59,7 @@
         </div>
     </section>
 @endsection
-    {{-- <div class="modal-container">
+    <div class="modal-container">
         <div class="modal drop-shadow-md">
             <ion-icon name="alert-circle-outline"></ion-icon>
             <h2>Aviso!!!</h2>
@@ -84,7 +67,7 @@
             <span>Confirme a exclusão, caso confirmado, o registro será apagado permanentemente.</span>
             <hr />
             <div class="btns">
-                <form style="display: inline" action="{{ url('/tasks/'.$task->id) }}" id="del-aviso" method="POST" enctype="multipart/form-data">
+                <form style="display: inline" id="del-aviso" method="POST" enctype="multipart/form-data">
                     @method('DELETE')
                     @csrf
                     <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>
@@ -92,7 +75,7 @@
                 <button class="btnClose drop-shadow-md" onclick="closeModalTasks()">Cancelar</button>
             </div>
         </div>
-    </div> --}}
+    </div>
 @if ($errors->any())
     <div class="box-alert">
         <div class="alert rounded-md drop-shadow-lg">

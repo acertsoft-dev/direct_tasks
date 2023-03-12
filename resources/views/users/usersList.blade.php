@@ -62,7 +62,7 @@
         <span>Confirme a exclusão, caso confirmado, o registro será apagado permanentemente.</span>
         <hr />
         <div class="btns">
-            <form style="display: inline" id="del-aviso" method="POST">
+            <form style="display: inline" action="{{ (url('/users/')) }}" id="del-aviso" method="POST">
                 @method('DELETE')
                 @csrf
                 <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>

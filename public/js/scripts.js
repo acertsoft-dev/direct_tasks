@@ -10,7 +10,7 @@ function startDate(){
 function openModalProjects(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/projects/${id}`);
+        formDel.action = formDel.action + '/' + id;
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -23,7 +23,7 @@ function closeModalProjects(){
 function openModalVersions(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/versions/${id}`);
+        formDel.action = formDel.action + '/' + id;
         numConfirm = 1;
         return modal.classList.add('active');
     }
@@ -36,7 +36,7 @@ function closeModalVersions(){
 function openModalUsers(id){
     const formDel = document.querySelector('#del-aviso'); 
     if(numConfirm == 0){
-        formDel.setAttribute('action', `https://pietronunes.com.br/direct_tasks/public/users/${id}`);
+        formDel.action = formDel.action + '/' + id;
         numConfirm = 1;
         return modal.classList.add('active');
     }

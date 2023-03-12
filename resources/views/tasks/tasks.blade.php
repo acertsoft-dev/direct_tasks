@@ -59,7 +59,7 @@
         </div>
     </section>
 @endsection
-
+@foreach ($tasks as $task)
     <div class="modal-container">
         <div class="modal drop-shadow-md">
             <ion-icon name="alert-circle-outline"></ion-icon>
@@ -68,18 +68,16 @@
             <span>Confirme a exclusão, caso confirmado, o registro será apagado permanentemente.</span>
             <hr />
             <div class="btns">
-                @foreach ($tasks as $task)
-                    <form style="display: inline" action="{{ url('/tasks/'.$task->id) }}" id="del-aviso" method="POST" enctype="multipart/form-data">
-                        @method('DELETE')
-                        @csrf
-                        <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>
-                    </form>
-                @endforeach
+                <form style="display: inline" action="{{ url('/tasks/'.$task->id) }}" id="del-aviso" method="POST" enctype="multipart/form-data">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btnOK drop-shadow-md" type="submit">Confirmar</button>
+                </form>
                 <button class="btnClose drop-shadow-md" onclick="closeModalTasks()">Cancelar</button>
             </div>
         </div>
     </div>
-
+@endforeach
 @if ($errors->any())
     <div class="box-alert">
         <div class="alert rounded-md drop-shadow-lg">

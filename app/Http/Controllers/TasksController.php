@@ -165,7 +165,7 @@ class TasksController extends Controller
                     foreach($request->file as $files){
                         $nameFile = $newDate->day . $newDate->month . $newDate->year . $newDate->hour . $newDate->minute . '-' . $files->getClientOriginalName();
                         array_push($namesFiles, $nameFile);
-                        $upload = $files->storeAs('file_tasks', $nameFile);
+                        $upload = $files->storeAs($request->folder, $nameFile);
                     }    
                     $nameFileTaskExist = $taskExistent->name_files;
                     $stringFiles = implode(';', $namesFiles);

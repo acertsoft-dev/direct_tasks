@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="/directTasks/public/css/reports.css">
 @section('Title', 'DirectTarefas - Relatórios');
 
+@section('mainUsers');
+
 
 
 @endsection;

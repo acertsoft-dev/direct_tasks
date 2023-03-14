@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
-
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReportsController extends Controller
 {
@@ -19,11 +19,8 @@ class ReportsController extends Controller
             'cidade' => 'Capão da Canoa'
         ];
 
-        $dompdf = new Dompdf();
-        $dompdf->loadHtml(view('reports.report', $dados)->render());
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-
-        return $dompdf->stream('report.pdf');
+        $pdf = Pdf::loadView('reports.report', compact('dados'));
+        
+        return $pdf->stream('Relatório_Personalizado.pdf');
     }
 }

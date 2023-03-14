@@ -20,7 +20,7 @@ class ReportsController extends Controller
         ];
 
         $dompdf = new Dompdf();
-        $dompdf->loadHtml(view('report', $dados)->render());
+        $dompdf->loadHtml(view('reports.report', $dados)->render());
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
 

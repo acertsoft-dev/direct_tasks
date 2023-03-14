@@ -1,7 +1,7 @@
 @extends('layouts.mainUsers')
 @extends('layouts.main')
 <link rel="stylesheet" href="/directTasks/public/css/reports.css">
-<link rel="stylesheet" href="/directTasks/public/css/createStyle">
+<link rel="stylesheet" href="/directTasks/public/css/createStyle.css">
 @section('Title', 'DirectTarefas - Relatórios')
 
 @section('mainUsers')

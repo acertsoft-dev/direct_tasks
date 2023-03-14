@@ -1,4 +1,5 @@
 @extends('layouts.mainUsers')
+@extends('layouts.main')
 <link rel="stylesheet" href="/directTasks/public/css/reports.css">
 <link rel="stylesheet" href="/directTasks/public/css/createStyle">
 @section('Title', 'DirectTarefas - Relatórios')

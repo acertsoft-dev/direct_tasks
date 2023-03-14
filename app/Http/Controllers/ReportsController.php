@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Dompdf\Dompdf;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReportsController extends Controller

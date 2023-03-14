@@ -46,3 +46,4 @@ Route::post('/createUser',[UserController::class, 'createUser'])->middleware('au
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware('auth');
 
 Route::get('/reports', [ReportsController::class, 'ShowGenerateReports'])->name('reports')->middleware('auth');
+Route::get('/readyReport', [ReportsController::class, 'ShowReport'])->middleware('auth');

@@ -22,6 +22,7 @@
                 <li id="projetos"><a href="{{ url('/projects') }}"><ion-icon name="folder-outline"></ion-icon>Projetos</a></li>
                 <li id="versoes"><a href="{{ url('/versions') }}"><ion-icon name="reader-outline"></ion-icon>Versões</a></li>
                 <li id="usuarios"><a href="{{ url('/users') }}"><ion-icon name="person-add-outline"></ion-icon>Usuários</a></li>
+                <li id="relatorios"><a href="{{ url('/reports') }}"><ion-icon name="documents-outline"></ion-icon>Relatórios</a></li>
             </ul>
         </div>
         <div class="card-user">

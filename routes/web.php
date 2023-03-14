@@ -5,6 +5,7 @@ use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VersionsController;
 use App\Http\Controllers\TasksController;
+use App\Http\Controllers\ReportsController;
 use GuzzleHttp\Middleware;
 
 Route::get('/', [UserController::class, 'home'])->middleware('auth');
@@ -43,3 +44,5 @@ Route::put('/users/{id}', [UserController::class, 'update'])->middleware('auth')
 Route::get('/createUser', [UserController::class, 'showCreateUser'])->name('createUser')->middleware('auth');
 Route::post('/createUser',[UserController::class, 'createUser'])->middleware('auth');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware('auth');
+
+Route::get('/reports', [ReportsController::class, 'ShowGenerateReports'])->nome('reports')->middleware('auth');
